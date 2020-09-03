@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title> Eugenia Kontopoulou </title>
+                <link rel="stylesheet" type="text/css" href="mystyle.css" media="screen" />
+	
+	</head>
+	
+	<body>
+		<div id="wrapper">
+		
+			<main>
+				<div id="content">
+					<div class="innertube">
+					<table style="width:100%">
+  <tr>
+    <td><h1>Evgenia (Eugenia) - Maria Kontopoulou</h1>
+						<p>Computer Science Department <br>
+		                   Purdue University <br>
+		                   West Lafayette, IN </p></td>
+    <!--<td> <h3>Address:</h3> 
+					<p>Felix Hass Hall <br>
+					Room G114 <br>
+					250 N. University Street <br>
+					Purdue University <br>
+					West Lafayette, IN, 47906</p></td>
+  </tr>-->
+</table>					
+					</div>
+				</div>
+			</main>
+			
+			<nav id="nav">
+				<div class="innertube">
+					<ul>
+						<li><hr></li>
+						<li><a href="index.html">About</a></li>
+						<li><hr></li>
+						<li><a href="research.html">Research</a></li>
+						<li><hr></li>
+						<li><a href="publications.html">Publications</a></li>
+						<li><hr></li>
+						<li><a href="presentations.html">Presentations</a></li>
+						<li><hr></li>
+						<li><a href="software.html">Software</a></li>
+						<li><hr></li>
+						<li><a href="teaching.html">Teaching</a></li>
+						<li><hr></li>	
+						<li><a href="emkcv.pdf">CV</a></li>
+						<li><hr></li>
+						<li><a href="activities.html">Activities</a></li>
+						<li><hr></li>			
+					</ul>
+					
+					<ul>
+					<br><br><br>
+					<p> <b>Address:</b> <br> 
+					Purdue University <br>
+					Lawson Hall <br>
+					305 N. University Str. <br>
+					West Lafayette, <br> IN, 47907
+				<br><br>
+				<b> email: </b> ekontopo@purdue.edu</p>
+					</ul>
+					<br><br>
+				</div>
+			</nav>
+			<div id="content">
+			<p> <h2> Software </h2></p>
+			
+            <hr>
+            <h3> <center>TeraPCA</center> </h3>
+            <hr>
+			 <table style="width:100%">
+               <tr><td style="text-align: justify;"> A library that computes the top Principal Components (PCs) of tera-scale matrices using Randomized Singular Value Decomposition (RandSVD). Our implementation is based on multithreaded libraries such as LAPACKE, BLAS and MKL, and it can handle datasets which might exceed the amount of available system memory by performing out-of-core computations. <td style="text-align: right;" valign="bottom"><a href="https://github.com/aritra90/TeraPCA">[Download]</a></td> </tr>
+             </table>
+             <hr>
+                <h3> <center>Large Genetic Data Generator </center> </h3>
+            <hr>
+            <table style="width:100%">
+			<tr><td style="text-align: justify;">A software that enables fast generation of simulated large scale genetic data using sophisticated random distributions to simulate the genetic patterns. Implemented on C++ leveraging OPENMP for fast parallel computations. <td style="text-align: right;" valign="bottom"><a href="https://github.com/eugeniamaria/DataSimulator">[Download]</a><td></tr>
+            </table>
+            <hr>
+            <h3> <center>Approximation of the LogDeterminant of an SPD Matrix </center> </h3>
+            <hr>
+            <table style="width:100%">
+            <tr><td style="text-align: justify;"> The software from the paper: <em>"A Randomized Algorithm for Approximating the Log Determinant of a Symmetric Positive Definite Matrix".</em><td style="text-align: right;" valign="bottom"><a href="http://web.ics.purdue.edu/~ekontopo/software/approxLogDet.zip">[Download]</a></td></tr>
+            </table>
+            <hr>
+           <h3> <center>Text-to-Matrix Generator (TMG)</center> </h3>
+           <hr>
+           <table style="width:100%">
+			<p style="text-align: justify;">A Matlab Toolbox that can be used for various tasks in text mining (TM) specifically:
+			<ol style= type="i">
+				<li style="text-align: justify;">Indexing</li>
+				<li style="text-align: justify;">Retrieval</li>
+				<li style="text-align: justify;">Dimensionality Reduction</li>
+				<li style="text-align: justify;">No-Negative Matrix Factorizations</li>
+				<li style="text-align: justify;">Clustering</li>
+				<li style="text-align: justify;">Classification</li>
+			</ol>
+			</p>
+                <p style="text-align: justify;">Most of TMG is written in MATLAB, though a large segment of the indexing phase is written in <a href="http://en.wikipedia.org/wiki/Perl">Perl</a>.</p>
+                <p style="text-align: justify;">TMG is especially suited for TM applications where data is high-dimensional but extremely sparse as it uses the sparse matrix infrastructure of MATLAB. Initially built, by <a href="mailto:zeimpekis@gmail.com">Dr. Dimitrios Zeimpekis</a>, as a preprocessing tool for creating term-document matrices (tdm's) from unstructured text that wasreportedly used with success by several researchers and instructors, the new version of TMG (December 2011) offers a much wider range of tools.
+
+                </p>
+                <p style="text-align: justify;">My work on TMG focused on the creation of a brandly new tool, by incorporating into TMG methods for dimensionality reduction, under the name Structured Dimensionality Reduction Techniques. These techniques, varying from fully deterministic to partially randomized, tend to result in factors that are scaled copies of the actual rows and/or columns of the initial matrix. Another, interesting feature that the new version of TMG will include is partially randomized techniques that boost BLAS type operations like Matrix-Vector Multiplication.
+                </p>
+                For more infomation visit the <a href="http://scgroup20.ceid.upatras.gr:8000/tmg/">official page of TMG.</a>
+            </td></tr>
+             </table>
+            </div>
+		</div>
+
+
+	</body>
+</html>

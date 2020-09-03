@@ -1,19 +1,19 @@
 <style type="text/css">
-
+		
 			body{
 				margin:0;
 				padding:0;
 				font-family: Sans-Serif;
 				line-height: 1.5em;
 			}
-
+			
 			main {
 				padding-bottom: 10010px;
 				margin-bottom: -10000px;
 				float: left;
 				width: 100%;
 			}
-
+			
 			#nav {
 				float: left;
 				width: 230px;
@@ -22,34 +22,34 @@
 				list-style: none;
                                 height: 100%
 			}
-
+			
 			#wrapper {
 				text-align: justify;
 				overflow: hidden;
 				margin-right: 300px;
 			}
-
+			
 			#content {
 				margin-left: 230px; /* Same as 'nav' width */
-
+				
 			}
-
+			
 			.innertube{
 				margin: 30px; /* Padding for content */
 				margin-top: 0;
 			}
-
+			
 			p {
 				color: black;
                 text-align: justify;
 			}
-
+	
 			nav ul {
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
 			}
-
+			
 			nav ul a {
 				color: black;
 				text-decoration: none;
@@ -92,5 +92,5 @@
               color: black;
             }
 
-
+	
 </style>

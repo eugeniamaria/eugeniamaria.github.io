@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="width=device-width, initial-scale=1" content="text/html; charset=utf-8">
+		<title> Eugenia Kontopoulou </title>
+				<link rel="stylesheet" type="text/css" href="mystyle.css" media="screen" />
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+            <script type="text/javascript">
+             function openResearch(evt, Research) {
+                 var i, tabcontent, tablinks;
+                 tabcontent = document.getElementsByClassName("tabcontent");
+                 for (i = 0; i < tabcontent.length; i++) {
+                     tabcontent[i].style.display = "none";
+                 }
+                 tablinks = document.getElementsByClassName("tablinks");
+                 for (i = 0; i < tablinks.length; i++) {
+                     tablinks[i].className = tablinks[i].className.replace(" active", "");
+                 }
+                 document.getElementById(Research).style.display = "block";
+                 evt.currentTarget.className += " active";
+             }
+         </script>
+	</head>
+	
+<body>
+
+    <div id="wrapper">
+        <main>
+            <div id="content">
+                <div class="innertube">
+                    <table style="width:100%">
+                        <tr>
+                            <td><h1>Evgenia (Eugenia) - Maria Kontopoulou</h1>
+                                <p>Computer Science Department <br> Purdue University <br> West Lafayette, IN </p></td>
+                                    <!--<td> <h3>Address:</h3>
+                                    <p>Felix Hass Hall <br>
+                                    Room G114 <br>
+                                    250 N. University Street <br>
+                                    Purdue University <br>
+                                    West Lafayette, IN, 47906</p></td>
+                                    </tr>-->
+                    </table>
+                </div> <!-- innertube-->
+            </div> <!-- content-->
+        </main>
+
+        <nav id="nav">
+            <div class="innertube">
+                <ul> <!-- navigition list -->
+                    <li><hr></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><hr></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><hr></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><hr></li>
+                    <li><a href="presentations.html">Presentations</a></li>
+                    <li><hr></li>
+                    <li><a href="software.html">Software</a></li>
+                    <li><hr></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><hr></li>
+                    <li><a href="emkcv.pdf">CV</a></li>
+                    <li><hr></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><hr></li>
+                </ul> <!-- navigition list -->
+					
+                <ul> <!-- address -->
+                <br><br><br>
+                <p> <b>Address:</b> <br>
+                Purdue University <br>
+                Lawson Hall <br>
+                305 N. University Str. <br>
+                West Lafayette, <br> IN, 47907
+                <br><br>
+                <b> email: </b> ekontopo@purdue.edu</p>
+                </ul> <!-- address -->
+                <br><br>
+            </div> <!-- nav - innertube-->
+        </nav>
+        
+        <div id="content">
+			<h2>Research</h2>
+            
+            <p> The research areas I am (have been) working on, lie in the interesection of Numerical Linear Algebra, Randomized Algorithms and Graph Theory. I am particularly interested in (Randomized) Numerical Linear Algebra with a focus on designing, analyzing and implementing randomized algorithms for the solution of linear algebraic problems in large-scale data applications. Click below for more information about the projects I have worked on.</p>
+            <!-- Tab links -->
+            <hr>
+            <div class="tab">
+              <button class="tablinks" onclick="openResearch(event,'RandNLA')"> <h3> Randomized Numerical Linear Algebra </h3></button>
+              <button class="tablinks" onclick="openResearch(event,'LRA')"> <h3>Structured Low Rank Matrix Approximations</h3> </button>
+              <button class="tablinks" onclick="openResearch(event,'Graphs')"> <h3>Graph Analysis and Linear Algebra </h3></button>
+            </div>
+            <hr>
+           
+			
+            <div id="RandNLA" class="tabcontent">
+            <h4>Randomized Numerical Linear Algebra (RandNLA)</a></h4>
+            <p>My current work in RandNLA includes:
+            <ul>
+            <li><b><u>Randomized Algorithms for the approximation of the Von-Neumann Entropy</u></b></li>
+            <p>The Von-Neumann Entropy is a generalization of the Shannon and Gibbs entropy, and is mostly used in quantum mechanics. Given the description of a quantum system as a mixture of pure states in the form of a matrix, <span lang="latex"> R</span> (this matrix is also called "density matrix"), its Von-Neumann Entropy, introduced by John Von-Neumann in 1932, can be computed as:
+            <center><div lang="latex">H(R) = -\sum_{i=1}^n p_i\log p_i</div></center> where  <span lang="latex"> p_i </span> is the i-th eigenvalue of <span lang="latex">R</span>. Classic algorithms (e.g. Singular Value Decomposition) for the above equation can be prohibitively expensive for large-scale density matrices.  This motivated us to develop algorithms that build upon RandNLA tools (e.g. random trace estimators, and provable bounds for the power method) as well as on classic approximation theory (function approximation using Taylor or Chebyshev polynomials.) and run faster than the trivial <span lang="latex">\mathcal{O}(n^3)</span> approaches.  All algorithms come with provable accuracy guarantees and experimental evaluations that support the theoretical findings showing considerable speedup with small accuracy loss.</p>
+            <li><b><u>TeraPCA: A fast and scalable method to study genetic variation in tera-scale genotypes</u></b></li>
+            <p>One of the significant challenges in population genetics is the growing size of terabytes of data with close to one million genotyped humans. Principal Component Analysis (PCA) serves as a key tool in capturing population stratification, as it maps the genetic variation inferred from SNPs. However, a key limitation of PCA is its scalability and computational complexity when applied on tera-scale data, e.g. about one million individuals at one million SNPs. To address this issue, we propose TeraPCA, ie. we compute the top Principal Components (PCs) of tera-scale matrices using a method known as Randomized Singular Value Decomposition (RandSVD). After computing the mean-centered matrix, we invoke RandSVD to approximate, under a user-specified accuracy, the dominant PCs. Our implementation is based on multithreaded libraries such as LAPACKE, BLAS and MKL, and it can handle datasets which might exceed the amount of available system memory by performing out-of-core computations. We ran our algorithm on publicly available data sets such as the Human Genome Diversity Panel (HGDP), which we replicated to create data sets containing two thousand individuals and 1.4 million SNPs. Our implementation of TeraPCA outperforms state-of-the-art methods such as EIGENSOFT’s smartpca, while producing similar qualitative results when ran on the same computing system. As a brief illustration, smartpca required 61.2 mins to compute the top 10 PCs exploiting 20 threads, whereas TeraPCA required 14.7 mins and 11.5 mins exploiting 1 and 20 threads, respectively. TeraPCA was also faster than smartpca’s fastmode which converged in 15.6 mins. We also applied TeraPCA on simulated genotyped data, generated by the Pritchard-Stephens-Donelly (PSD) model for ten thousand individuals and ten million SNPs, leading to tera-size data sets and tera-sample-size scales. TeraPCA is an implementation which targets the handling of tera-scale data while combining the accurate capturing of genetic variation of the samples with a low computational overhead, and with the ability to take advantage of current multiprocessor architectures by being implemented on top of established multithreaded linear algebra routines.</p>
+            <li><b><u>Structural convergence analysis for the approximation of dominant subspaces from block Krylov spaces</u></b></li>
+            <p>In this work we are interested in understanding the quality of the approximations to the top-k singular vectors from block Krylov spaces and not on how to extract these approximations in a numerical stable way. Assume an abritrary matrix <span lang="latex">A</span> and an integer k less than the rank of <span lang="latex">A</span>. Let <span lang="latex">U_k</span> be the top-k left singular vectors of <span lang="latex">A</span>, our objective is to construct approximations for <span lang="latex">U_k</span>, <span lang="latex">\hat{U_k}</span> and "measure" their quality. There are at least two popular metrics for the quality of the approximation. The most popular way is to measure the angles between the spaces spanned by <span lang="latex">U_k</span> and <span lang="latex">\hat{U_k}</span>. If <span lang="latex">U_k</span> is not unique, meaning there is no singular gap, this metric becomes ill-posed. The Theoretical Computer Science community is more interested in measuring the error between <span lang="latex">A</span> and its projection into the space spanned by <span lang="latex">\hat{U_k}</span>. This metric is well-posed even in the absence of a singular gap. We provide provable bounds for both metrics using odd degree and odd powers only, gap-amplifying Chebyshev polynomials and the assumption that the dimension of the space spaned by <span lang="latex">{V_k^\top X}</span>, where <span lang="latex">{V_k}</span> is the matrix of the top-k right singular vectors and <span lang="latex">X</span> is the random guess, is full. The novelty of our work was that we combined the classic Lanczos convergence analysis with near optimal low rank approximations using least squares. The critical part was to make the  connection between the principal angles of two spaces with the least squares residuals.</p>
+            <li><b><u>Randomized algorithms for sparce PCA</b></u></li>
+            <p>Sparse PCA is an optimization problem which is similar to PCA but with additional (sparsity) constraints. Obtaining the best possible solution is computationally infeasible (this is an NP-hard problem). Our approach is to first solve a relaxed optimization problem and then exploit a randomized rounding strategy to sparsify the solution. The sparse solution captures a significant portion of the variance  the data and also can be interpretable for real data.</p>
+            <li><u><b>Randomized algorithms for the approximation of the log-determinant of a symmetric positive definite matrix</b></u></li>
+            <p>The approximation of the log-determinant of an SPD matrix is an important computation in statistics. When input matrices are large, straightforward approaches such as those based on matrix decompositions, e.g. Cholesky, become compuationally and memory prohibitive. We approximate the log-determinant of the SPD matrix using a randomized estimator, and we empirically evaluate the performance of our algorithm. Our results indicate that an efficient implementation of this algorithm can guarantee modest approximation errors with high probability, while at the same time the complexity of the algorithms is retained low.</p>
+            <!--</ul><a href="http://web.ics.purdue.edu/~ekontopo/research.html">[Go Back]</a>
+            </p>-->
+            </div><!--RandNLA-->
+
+            <div id="LRA" class="tabcontent">
+                <h4>Structured Low Rank Matrix Approximations</h4>
+            <p>I worked for many years on the implementation and testing (in the <a href="http://scgroup20.ceid.upatras.gr:8000/tmg/">Text-to-Matrix Generator (TMG)</a> toolbox), of some Deterministic and Randomized Numerical Linear Algebra Algorithms that decompose matrices into low rank factors with specific structure e.g. factors containing scaled copies of the columns and/or rows of the matrix. An interesting part of this work is how efficient are these algorithms in keeping the structure or the characteristics of the matrix e.g. the sparsity, and how much interpretable these methods can be in real data.
+            <!--<a href="http://web.ics.purdue.edu/~ekontopo/research.html">[Go Back]</a></p>-->
+            </div><!--LRA-->
+
+            <div id="Graphs" class="tabcontent">
+            <h4>Graph Analysis and Linear Algebra</h4>
+            <p>An interesting project I have also participated has to do with the development and application of node ranking algorithms for Ergodic Literature. Ergodic Literature refers to books that do not follow the natural ordering of the pages, but instead the reader gets to pick the next page (ergon in Greek) based on some suggestions, each which leads to a different story. Following all different stories that can be formed, we can abbreviate them by a directed graph in which the nodes are representing the pages of the book. We investigated notions like the ranking of nodes, the main concepts of the book and how these are related to the top ranking pages as well as how we can cluster the pages using their content. At this point we are working on how to combine the graph information (ranking of the pages) with the content (stories on each page).
+            
+            <!--<br><br>
+            <a href="http://web.ics.purdue.edu/~ekontopo/research.html">[Go Back]</a></p>-->
+            </div><!--Graphs-->
+
+        </div><!-- content-->
+            
+		</div><!-- wrapper -->
+    
+	</body>
+  
+</html>
