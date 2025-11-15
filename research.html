@@ -2,10 +2,12 @@
 <!-- Template by quackit.com -->
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="width=device-width, initial-scale=1" content="text/html; charset=utf-8">
-		<title> Eugenia Kontopoulou </title>
+		<meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+						<title> Eugenia Kontopoulou </title>
 				<link rel="stylesheet" type="text/css" href="mystyle.css" media="screen" />
-		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+
+		<!--<script type="text/javascript" src="https://latex.codecogs.com/latexit.js"></script>
             <script type="text/javascript">
              function openResearch(evt, Research) {
                  var i, tabcontent, tablinks;
@@ -21,7 +23,38 @@
                  evt.currentTarget.className += " active";
              }
          </script>
-	</head>
+	</head>-->
+	<!-- Keep HTTPS to avoid mixed-content blocking -->
+<script src="https://latex.codecogs.com/latexit.js"></script>
+
+<!--<style>
+	/* Ensure only the selected tab panel shows */
+	.tabcontent { display: none; }
+	.tab { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+	.tab .tablinks { cursor: pointer; }
+	.tab .tablinks.active { outline: 2px solid #ccc; }
+</style>-->
+
+<script>
+	function openResearch(evt, id) {
+		const tabcontent = document.getElementsByClassName("tabcontent");
+		for (let i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		const tablinks = document.getElementsByClassName("tablinks");
+		for (let i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(id).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+
+	// Open the first tab automatically
+	window.addEventListener('DOMContentLoaded', () => {
+		document.querySelector('.tab .tablinks')?.click();
+	});
+</script>
+</head>
 
 <body>
 
@@ -79,7 +112,7 @@
             </div> <!-- nav - innertube-->
         </nav>
 
-        <div id="content">
+        <div id="researchcontent">
 			<h2>Research</h2>
 
             <p> The research areas I am (have been) working on, lie in the interesection of Numerical Linear Algebra, Randomized Algorithms and Graph Theory. I am particularly interested in (Randomized) Numerical Linear Algebra with a focus on designing, analyzing and implementing randomized algorithms for the solution of linear algebraic problems in large-scale data applications. Click below for more information about the projects I have worked on.</p>
@@ -94,7 +127,7 @@
 
 
             <div id="RandNLA" class="tabcontent">
-            <h4>Randomized Numerical Linear Algebra (RandNLA)</a></h4>
+            <h4>Randomized Numerical Linear Algebra (RandNLA)</h4>
             <p>My current work in RandNLA includes:
             <ul>
             <li><b><u>Randomized Algorithms for the approximation of the Von-Neumann Entropy</u></b></li>
