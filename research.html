@@ -24,37 +24,37 @@
              }
          </script>
 	</head>-->
-	<!-- Keep HTTPS to avoid mixed-content blocking -->
-<script src="https://latex.codecogs.com/latexit.js"></script>
+	    <!-- Keep HTTPS to avoid mixed-content blocking -->
+        <script src="https://latex.codecogs.com/latexit.js"></script>
 
-<!--<style>
-	/* Ensure only the selected tab panel shows */
-	.tabcontent { display: none; }
-	.tab { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-	.tab .tablinks { cursor: pointer; }
-	.tab .tablinks.active { outline: 2px solid #ccc; }
-</style>-->
+        <!--<style>
+            /* Ensure only the selected tab panel shows */
+            .tabcontent { display: none; }
+            .tab { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+            .tab .tablinks { cursor: pointer; }
+            .tab .tablinks.active { outline: 2px solid #ccc; }
+        </style>-->
 
-<script>
-	function openResearch(evt, id) {
-		const tabcontent = document.getElementsByClassName("tabcontent");
-		for (let i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-		const tablinks = document.getElementsByClassName("tablinks");
-		for (let i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-		document.getElementById(id).style.display = "block";
-		evt.currentTarget.className += " active";
-	}
+        <script>
+            function openResearch(evt, id) {
+                const tabcontent = document.getElementsByClassName("tabcontent");
+                for (let i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                const tablinks = document.getElementsByClassName("tablinks");
+                for (let i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(id).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
 
-	// Open the first tab automatically
-	window.addEventListener('DOMContentLoaded', () => {
-		document.querySelector('.tab .tablinks')?.click();
-	});
-</script>
-</head>
+            // Open the first tab automatically
+            window.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('.tab .tablinks')?.click();
+            });
+        </script>
+    </head>
 
 <body>
 
