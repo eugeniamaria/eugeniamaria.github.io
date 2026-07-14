@@ -116,24 +116,24 @@
             <div id="content">
                 <h2>Research</h2>
 
-                <p> The research areas I am (have been) working on, lie in the interesection of Numerical Linear Algebra, Randomized Algorithms and Graph Theory. I am particularly interested in (Randomized) Numerical Linear Algebra with a focus on designing, analyzing and implementing randomized algorithms for the solution of linear algebraic problems in large-scale data applications. Click below for more information about the projects I have worked on.</p>
+                <p> The research areas I am (have been) working on, lie in the interesection of Numerical Linear Algebra, Randomized Algorithms and Graph Theory for Scientific and High Performance Computing. I am particularly interested in (Randomized) Numerical Linear Algebra with a focus on designing, analyzing and implementing randomized algorithms for the solution of linear algebraic problems in large-scale data applications. Click below for more information about the projects I have worked on.</p>
                 <!-- Tab links -->
                 <hr>
                 <div class="tab">
-                <button class="tablinks" onclick="openResearch(event,'RandNLAHPC')"> <h3>High Performance Computing & RandNLA </h3></button>
+                <button class="tablinks" onclick="openResearch(event,'RandNLAHPC')"> <h3>High Performance Computing</h3></button>
                 <button class="tablinks" onclick="openResearch(event,'RandNLA')"> <h3> Randomized Numerical Linear Algebra </h3></button>
                 <button class="tablinks" onclick="openResearch(event,'LRA')"> <h3>Structured Low Rank Matrix Approximations</h3> </button>
-                <button class="tablinks" onclick="openResearch(event,'Graphs')"> <h3>Graph Analysis and Linear Algebra </h3></button>
+                <button class="tablinks" onclick="openResearch(event,'Graphs')"> <h3>Graph Analysis </h3></button>
                 </div>
                 <hr>
 
                 <div id="RandNLAHPC" class="tabcontent">
                 <h4>High Performance Computing (HPC)</h4>
-                <p>My current work in RandNLA includes:
+                <p>My current work in HPC RandNLA includes:</p> 
                 <ul> 
-                <li><b><u>Distributed PCA for Large Genomic Data</u></b></li>
                 <li><b><u>DistPCA: A distributed method to study genetic variation in tera-scale genotypes</u></b></li>
-                         <p></p>    </p></ul> 
+                <p>DistPCA is a distributed out-of-core C++ framework for tera-scale genomic Principal Component Analysis (PCA), designed to scale efficiently across both single- and multi-node computing systems. Built on top of Message Passing Interface (MPI), it employs a hybrid multi-level parallelism scheme combining multiprocessing, OpenMP multithreading, SIMD vectorization, and double buffering across all three stages of the PCA pipeline (I/O, data preprocessing, numerical method). Evaluated on datasets reaching up to 11 TB, DistPCA achieves speedups of up to 58.2× and over 98% reduction in wall-clock time, while maintaining parallel efficiency above 82% and preserving the accuracy of the recovered principal components (PCs). </p> 
+                </ul> 
                 </div><!--HPC-->
 
                 <div id="RandNLA" class="tabcontent">
